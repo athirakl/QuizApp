@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+ 
+    <style>
+    body{
+            background-color: #7c1e97;
+
+        }
+    </style>
+</head>
+<body>
+
+
+    
+
+
+    <div class="container mt-5"  >
+        <div class="row" >
+            <div class="col-4" ></div>
+            <div class="col-4" id="id_b">
+                <strong class="text-center"><center><h3>Login Form</h3></center></strong>
+                <form action="" method="post" class="mt-5">
+                    {%csrf_token%}
+                    {{form.as_p}}
+                    <!-- <button type="submit">login</button> -->
+                    <center>
+                        <button type="submit" value="login" class="btn btn-primary rounded-pill">
+                            Login
+
+                        </button>
+
+                    </center>
+                </form>
+                <div class="text-center mt-5">
+                    <h6>not registered  <a href="{%url 'register'%}">register here</a></h6>
+
+                </div>
+
+            </div>
+            
+            <div class="col-4"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
